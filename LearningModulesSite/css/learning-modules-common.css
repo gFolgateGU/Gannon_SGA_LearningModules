@@ -1,0 +1,20 @@
+.page-section {
+    padding-top: 2.5%;
+    padding-bottom: 2.5%;
+}
+
+.heading-section {
+    padding-bottom: 2.5%;
+}
+
+.bg-maroon {
+    background: #660000;
+}
+
+.text-maroon {
+    color: #660000;
+}
+
+.text-gold {
+    color: #F9CF62;
+}
