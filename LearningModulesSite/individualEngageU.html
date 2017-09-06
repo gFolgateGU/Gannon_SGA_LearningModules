@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="description" content="">
+        <meta name="author" content="">
+
+        <title>Gannon University - Learning Modules Home</title>
+
+        <!-- Bootstrap core CSS -->
+        <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+        <!-- Custom styles for this template -->
+        <link href="css/one-page-wonder.css" rel="stylesheet">
+        <link href="css/learning-modules-common.css" rel="stylesheet">
+        <link href="css/font-awesome/css/font-awesome.css" rel="stylesheet">
+        <link href="css/learning-modules-card-extras.css" rel="stylesheet">
+    </head>
+    <body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+            <div class="container">
+                <a class="navbar-brand" href="#"><span class="text-gold">Learning Modules</span></a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ml-auto">
+                    <li clalss="nav-item active">
+                    <a class="nav-link" href="#">Home
+                        <span class="sr-only">(current)</span>
+                    </a>
+                    </li>
+                    <li class="nav-item">
+                    <a class="nav-link" href="#"><span class="text-gold">About</span></a>
+                    </li>
+                    <li class="nav-item">
+                    <a class="nav-link" href="#"><span class="text-gold">Services</span></a>
+                    </li>
+                    <li class="nav-item">
+                    <a class="nav-link" href="#"><span class="text-gold">Contact</span></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- Header -->
+    <header class="masthead">
+            <div class="overlay">
+                <div class="container text-gold">
+                <h1 class="display-2"><b>EngageU Essentials</b></h1>
+                <hr>
+                <h3 class="display-6">Learn what it takes to become an effective user on EngageU</h3>
+            </div>
+        </div>
+    </header>
+    <!-- Module Features -->
+    <section class="page-section bg-dark">
+        <div class="container text-white">
+            <div class="text-center heading-section">
+                <h1 class="heading-text">Module Features</h1>
+                <hr>
+                <div class="text-center">
+                    <ol class="list-group">
+                        <li class="list-group-item feature-list-item">1. Managing your Account Settings</li>
+                        <li class="list-group-item feature-list-item">2. Searching for Organizations</li>
+                        <li class="list-group-item feature-list-item">3. Contacting Organizations of Interest</li>
+                        <li class="list-group-item feature-list-item">4. Searching and Finding Upcoming Events</li>
+                        <li class="list-group-item feature-list-item">5. Starting a Discussion Thread</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="knockoutIndividualArea">
+        <!-- Search Bar Area -->
+        <section class="page-section bg-maroon">
+            <div class="container text-gold">
+                <div class="text-center heading-section">
+                    <h1 class="heading-text">Start Learning!</h1>
+                    <hr>
+                    <div class="text-center container">
+                        <div class="dropdown">
+                            <button class="fit-to-container btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Select a Feature Here
+                            </button>
+                            <div class="fit-to-container dropdown-menu" aria-labelledby="dropdownMenu2">
+                                <button data-bind="click: function(data, event) { showFeature('AccountSettings', data, event) }" class="dropdown-item text-center text-maroon" type="button">Account Settings</button>
+                                <button data-bind="click: function(data, event) { showFeature('SearchOrganizations', data, event) }" class="dropdown-item text-center text-maroon" type="button">Search Organizations</button>
+                                <button data-bind="click: function(data, event) { showFeature('ContactOrganization', data, event) }" class="dropdown-item text-center text-maroon" type="button">Contacting Organizations</button>
+                                <button data-bind="click: function(data, event) { showFeature('SearchEvents', data, event) }" class="dropdown-item text-center text-maroon" type="button">Searching/Finding Upcoming Events</button>
+                                <button data-bind="click: function(data, event) { showFeature('StartDiscussion', data, event) }" class="dropdown-item text-center text-maroon" type="button">Start Discussion Thread</button>
+                            </div>
+                        </div>                    
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Module Features -->
+        <section class="page-section bg-dark">
+            <div class="container text-white">
+                <div class="text-center heading-section">
+                    <h1 class="heading-text">Module Features</h1>
+                    <hr>
+                    <button data-bind="click: function(data, event) { showFeature('AccountSettings', data, event) }">Right Dude Here</button>
+                    <div class="text-center">
+                        <div data-bind="foreach: features">
+                            <!-- ko if: visibility() == true-->
+                                <p data-bind="text: name"></p> 
+                            <!-- /ko -->    
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>   
+    </section>    
+    <!-- Footer -->
+    <footer class="py-5 bg-dark">
+        <div class="container">
+          <p class="m-0 text-center text-white">Copyright &copy; Gannon University SGA Learning Modules 2017</p>
+        </div>
+        <!-- /.container -->
+      </footer>
+  
+      <!-- Bootstrap core JavaScript -->
+      <script src="vendor/jquery/jquery.min.js"></script>
+      <script src="vendor/popper/popper.min.js"></script>
+      <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+  
+      <!--knockout include-->
+      <script src="scripts/knockout-3.4.2.js"></script>
+      <script src="scripts/view_models/individualEngageU/feature.js"></script>
+      <script src="scripts/view_models/individualEngageU/individualViewModel.js"></script>
+      <script>
+        $(document).ready(function () {
+            var viewModel = new individualViewModel();
+            ko.applyBindings(viewModel, document.getElementById("knockoutIndividualArea"));
+        });
+      </script>
+    </body>
+</html>
+    

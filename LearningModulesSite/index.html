@@ -27,7 +27,7 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarResponsive">
           <ul class="navbar-nav ml-auto">
-            <li class="nav-item active">
+            <li clalss="nav-item active">
               <a class="nav-link" href="#">Home
                 <span class="sr-only">(current)</span>
               </a>
@@ -45,6 +45,7 @@
         </div>
       </div>
     </nav>
+
     <!-- Header -->
     <header class="masthead">
       <div class="overlay">
@@ -56,11 +57,12 @@
         </div>
       </div>
     </header>
+
     <!-- Our Goal -->
     <section class="page-section bg-dark">
       <div class="container text-white">
         <div class="text-center heading-section">
-          <h1><b>Our Goal</b></h1>
+          <h1 class="heading-text">Our Goal</h1>
           <hr>
         </div>
         <div class="row align-items-center text-center">
@@ -87,44 +89,34 @@
         </div>
       </div>
     </section>
+
     <!-- What's available?  The Learning Module Feaature cards are displayed here. -->
     <section class="page-section bg-maroon">
         <div class="container text-gold">
           <div class="text-center heading-section">
-            <h1><b>What is Available?</b></h1>
+            <h1 class="heading-text">What is Available?</h1>
             <hr>
           </div>       
         </div>
-        <div class="container">
-          <div class="card text-center">
-            <div class="card-header bg-dark text-white">
-              <b>Learning Module #1</b>
-            </div>
-            <div class="card-block">
-              <h4 class="card-title card-header-display text-maroon">Getting used to EngageU as an Individual User</h4>
-              <p class="card-text text-maroon">With supporting text below as a natural lead-in to additional content.</p>
-              <a href="#" class="btn btn-square">Explore this Module</a>
-            </div>
-            <div class="card-footer text-muted bg-dark text-white">
-              Created 8/26/17
-            </div>
+        <div id="cardFeatureArea" class="container">
+          <div data-bind="foreach: cardFeatures">
+            <div class="card text-center">
+                <div class="card-header bg-dark text-white">
+                  <b>Learning Module</b>
+                </div>
+                <div class="card-block">
+                  <h4 class="card-title card-header-display text-maroon" data-bind="text: cardFeatureTitle"></h4>
+                  <p class="card-text text-maroon" data-bind="text: cardFeatureDescription"></p>
+                  <a class="btn btn-square" data-bind="attr: { href: exploreLink }">Explore this Module</a>
+                </div>
+                <div class="card-footer text-muted bg-dark text-white">
+                  Created <span data-bind="text: createdDate"><span>
+                </div>
+              </div>
+              <br>
+              <br>
           </div>
-          <br>
-          <br>
-          <div class="card text-center">
-              <div class="card-header bg-dark text-white">
-                <b>Learning Module #2</b>
-              </div>
-              <div class="card-block">
-                <h4 class="card-title card-header-display text-maroon">How to Manage an EngageU Organization</h4>
-                <p class="card-text text-maroon">With supporting text below as a natural lead-in to additional content.</p>
-                <a href="#" class="btn btn-square">Explore this Module</a>
-              </div>
-              <div class="card-footer text-muted bg-dark text-white">
-                Created 8/26/17
-              </div>
-            </div>
-        </div>   
+        </div>
     </section>
 
     <!-- Footer -->
@@ -140,5 +132,16 @@
     <script src="vendor/popper/popper.min.js"></script>
     <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
 
+    <!--knockout include-->
+    <script src="scripts/knockout-3.4.2.js"></script>
+
+    <script src="scripts/view_models/index/cardFeature.js"></script>
+    <script src="scripts/view_models/index/indexViewModel.js"></script>
+    <script>
+      $(document).ready(function () {
+        var viewModel = new indexViewModel();
+        ko.applyBindings(viewModel, document.getElementById("cardFeatureArea"));
+      });
+    </script>
   </body>
 </html>
