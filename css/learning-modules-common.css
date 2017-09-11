@@ -17,7 +17,7 @@
 }
 
 .bg-gold {
-    background: #F9CF62;
+    background: #F2AF32;
 }
 
 .text-maroon {
@@ -25,7 +25,7 @@
 }
 
 .text-gold {
-    color: #F9CF62;
+    color: #F2AF32;
 }
 
 .feature-list-item {
@@ -36,4 +36,8 @@
 .fit-to-container {
     width: 100%;
     max-width: 100%;
+}
+
+.defaultNoShow {
+    display: none;
 }

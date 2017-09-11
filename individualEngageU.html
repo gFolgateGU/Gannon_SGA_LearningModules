@@ -16,6 +16,7 @@
         <link href="css/learning-modules-common.css" rel="stylesheet">
         <link href="css/font-awesome/css/font-awesome.css" rel="stylesheet">
         <link href="css/learning-modules-card-extras.css" rel="stylesheet">
+        <link href="css/individualEngageU/individual-engageU.css" rel="stylesheet">
     </head>
     <body>
     <!-- Navigation -->
@@ -74,7 +75,7 @@
         </div>
     </section>
     <section id="knockoutIndividualArea">
-        <!-- Search Bar Area -->
+        <!-- Dropdown Bar Area -->
         <section class="page-section bg-maroon">
             <div class="container text-gold">
                 <div class="text-center heading-section">
@@ -97,22 +98,64 @@
                 </div>
             </div>
         </section>
-        <!-- Module Features -->
+
+        <!--Test and better improvement for module features -->
         <section class="page-section bg-dark">
             <div class="container text-white">
-                <div class="text-center heading-section">
-                    <h1 class="heading-text">Module Features</h1>
+                <div class="heading-section">
+                    <h1 class="text-center heading-text">Module Features</h1>
                     <hr>
-                    <div class="text-center">
-                        <div data-bind="foreach: features">
-                            <!-- ko if: visibility() == true-->
-                                <p data-bind="text: name"></p> 
-                            <!-- /ko -->    
+                    <div class="defaultNoShow" id="AccountSettings">
+                        <p>test1</p>
+                        <p>test2</p>
+                    </div>
+                    <div class="defaultNoShow" id="SearchOrganizations">
+                        <div class="text-center">
+                            <h3 class="text-gold">Search Organizations</h3>
+                            <hr>
+                        </div>
+                        <div>
+                            <div class="text-center">
+                                <p>Searching for organizations is made very easy with EngageU.  It can be a bit overwhelming with all of the clubs and organizations offered at Gannon.
+                                    Luckily with the tools shown in this feature, you will learn how to accomplish this fast and effectively.
+                                </p>
+                                <h5 class="sub-feature-heading text-gold">Ways to Search</h3>
+                                <div>
+                                    <p><span class="step">1.&nbsp;&nbsp;</span>After logging in, you will notice a large search bar in the middle of the home page.  This can be very effective
+                                     if you already know the club or organization you are looking for.
+                                    </p>
+                                    <!-- Insert image here showing the middle search bar on the home page -->
+                                    <p><span class="step">2.&nbsp;&nbsp;</span>This method is much more useful when you do not know exactly what clubs and organizations are out there.  By following the
+                                     steps below you can get to the page to do so
+                                    </p>
+                                    <div>
+                                        <p>1. Sign in with your Gannon Network ID and Passowrd if not done already</p>
+                                        <p>2. On the main navigation bar, click "ORGANIZATIONS"</p>
+                                        <!-- Insert image pointing to organizations -->
+                                    </div>
+                                    <p>On this page you can find an organization that suits your interest very easily!  You can now filter down organizations that suit your interests and see
+                                         the results on the right hand side of the page.
+                                    </p>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                </div>
+                    <div class="defaultNoShow" id="ContactOrganization">
+                        <p>folgate</p>
+                        <p>animals</p>
+                    </div>
+                    <div class="defaultNoShow" id="SearchEvents">
+                        <p>coldplay</p>
+                        <p>more text</p>
+                    </div>
+                    <div class="defaultNoShow" id="StartDiscussion">
+                        <p>last one</p>
+                        <p>okay</p>
+                    </div>
+                </div>          
             </div>
-        </section>   
+        </section>
+
     </section>    
     <!-- Footer -->
     <footer class="py-5 bg-dark">
@@ -120,23 +163,23 @@
           <p class="m-0 text-center text-white">Copyright &copy; Gannon University SGA Learning Modules 2017</p>
         </div>
         <!-- /.container -->
-      </footer>
+    </footer>
   
-      <!-- Bootstrap core JavaScript -->
-      <script src="vendor/jquery/jquery.min.js"></script>
-      <script src="vendor/popper/popper.min.js"></script>
-      <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
-  
-      <!--knockout include-->
-      <script src="scripts/knockout-3.4.2.js"></script>
-      <script src="scripts/view_models/individualEngageU/feature.js"></script>
-      <script src="scripts/view_models/individualEngageU/individualViewModel.js"></script>
-      <script>
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/popper/popper.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+
+    <!--knockout include-->
+    <script src="scripts/knockout-3.4.2.js"></script>
+    <script src="scripts/view_models/individualEngageU/feature.js"></script>
+    <script src="scripts/view_models/individualEngageU/individualViewModel.js"></script>
+    <script>
         $(document).ready(function () {
             var viewModel = new individualViewModel();
             ko.applyBindings(viewModel, document.getElementById("knockoutIndividualArea"));
         });
-      </script>
+    </script>
     </body>
 </html>
     
