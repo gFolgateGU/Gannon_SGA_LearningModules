@@ -4,13 +4,10 @@ var individualViewModel = function () {
     vm.features = initFeatures();
 
     vm.showFeature = function(name) {
-        hideAllFeatures();
-        vm.features().forEach(function (feat) {
-            if (feat.name === name) {
-                feat.visibility(true);
-            }
-        });        
-    };
+        hideFeatures();
+        var jQueryDivToShow = "#" + name;
+        $(jQueryDivToShow).show();
+    }
 
     function initFeatures() {
         var availableFeatures = ko.observableArray();
@@ -24,9 +21,10 @@ var individualViewModel = function () {
         return availableFeatures;
     }
 
-    function hideAllFeatures() {
+    function hideFeatures() {
         vm.features().forEach(function (feat) {
-            feat.visibility(false);       
-        });  
+            var jQueryDivHolder = "#" + feat.name;
+            $(jQueryDivHolder).hide();
+        });
     }
 };

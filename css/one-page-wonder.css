@@ -15,8 +15,7 @@ body {
 }
 
 header.masthead {
-    /*background: url('https://unsplash.it/1900/1080?image=304') no-repeat center center scroll;*/
-    background: #660000;
+    background: url('../Images/Misc/HomeBanner.jpg') no-repeat center center scroll;*/
     -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;
@@ -28,8 +27,28 @@ header.masthead > .overlay {
     text-align: center;
 }
 
+header.masthead-alternate {
+    /*background: url('../Images/Misc/HomeBanner.jpg') no-repeat center center scroll;*/
+    background: #660000;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;    
+}
+
+.header.masthead-alternate > .overlay {
+    padding: 5rem 0;
+    text-align: center;
+}
+
 @media (min-width: 992px) {
     header.masthead > .overlay {
+        padding: 10rem 0;
+    }
+}
+
+@media (min-width: 992px) {
+    header.masthead-alternate > .overlay {
         padding: 10rem 0;
     }
 }

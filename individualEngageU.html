@@ -16,6 +16,7 @@
         <link href="css/learning-modules-common.css" rel="stylesheet">
         <link href="css/font-awesome/css/font-awesome.css" rel="stylesheet">
         <link href="css/learning-modules-card-extras.css" rel="stylesheet">
+        <link href="css/individualEngageU/individual-engageU.css" rel="stylesheet">
     </head>
     <body>
     <!-- Navigation -->
@@ -45,14 +46,11 @@
             </div>
         </div>
     </nav>
-    <!-- Header -->
-    <header class="masthead">
-            <div class="overlay">
-                <div class="container text-gold">
-                <h1 class="display-2"><b>EngageU Essentials</b></h1>
-                <hr>
-                <h3 class="display-6">Learn what it takes to become an effective user on EngageU</h3>
-            </div>
+    <header class="alernate-heading-title">
+        <div class="text-center text-gold">
+            <h1 class="display-2">EngageU Essentials</h1>
+            <hr>
+            <h3 class="display-6">Learn what it takes to become an effective user on EngageU</h3>
         </div>
     </header>
     <!-- Module Features -->
@@ -74,7 +72,7 @@
         </div>
     </section>
     <section id="knockoutIndividualArea">
-        <!-- Search Bar Area -->
+        <!-- Dropdown Bar Area -->
         <section class="page-section bg-maroon">
             <div class="container text-gold">
                 <div class="text-center heading-section">
@@ -97,22 +95,117 @@
                 </div>
             </div>
         </section>
-        <!-- Module Features -->
+
+        <!--Test and better improvement for module features -->
         <section class="page-section bg-dark">
             <div class="container text-white">
-                <div class="text-center heading-section">
-                    <h1 class="heading-text">Module Features</h1>
+                <div class="heading-section">
+                    <h1 class="text-center heading-text">Module Features</h1>
                     <hr>
-                    <div class="text-center">
-                        <div data-bind="foreach: features">
-                            <!-- ko if: visibility() == true-->
-                                <p data-bind="text: name"></p> 
-                            <!-- /ko -->    
+                    <div class="defaultNoShow" id="AccountSettings">
+                        <p>test1</p>
+                        <p>test2</p>
+                    </div>
+                    <div class="defaultNoShow" id="SearchOrganizations">
+                        <div class="text-center">
+                            <h3 class="text-gold">Search Organizations</h3>
+                            <hr>
+                        </div>
+                        <div>
+                            <div class="text-center">
+                                <p>Searching for organizations is made very easy with EngageU.  It can be a bit overwhelming with all of the clubs and organizations offered at Gannon.
+                                    Luckily with the tools shown in this feature, you will learn how to accomplish this fast and effectively.
+                                </p>
+                                <h5 class="sub-feature-heading text-gold">Ways to Search</h3>
+                                <div>
+                                    <p><span class="step">1.&nbsp;&nbsp;</span>After logging in, you will notice a large search bar in the middle of the home page.  This can be very effective
+                                     if you already know the club or organization you are looking for.
+                                    </p>
+                                    <!-- Insert image here showing the middle search bar on the home page -->
+                                    <p><span class="step">2.&nbsp;&nbsp;</span>This method is much more useful when you do not know exactly what clubs and organizations are out there.  By following the
+                                     steps below you can get to the page.
+                                    </p>
+                                    <div>
+                                        <p>1. Sign in with your Gannon Network ID and Passowrd if not done already</p>
+                                        <p>2. On the main navigation bar, click "ORGANIZATIONS"</p>
+                                        <!-- Insert image pointing to organizations -->
+                                    </div>
+                                    <p>On this page you can find an organization that suits your interest very easily!  You can now filter down organizations that suit your interests and see
+                                         the results on the right hand side of the page.
+                                    </p>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                </div>
+                    <div class="defaultNoShow" id="ContactOrganization">
+                        <div class="text-center">
+                            <h3 class="text-gold">Contacting an Organization</h3>
+                            <hr>
+                        </div>
+                        <div>
+                            <div class="text-center">
+                                <p>Contacting an organization is easy to achieve on EngageU.  By contacting an organization at Gannon you can accomplish many things wheter it be stating your interest in them, reporting a problem you have with them, getting information about an upcoming event, and much more!
+                                </p>
+                                <h5 class="sub-feature-heading text-gold">How to Contact an Organization</h3>
+                                <div>
+                                    <p><span class="step">1.&nbsp;&nbsp;</span>After logging in, look for the "ORGANIZATIONS" tab in the upper left hand corner of the
+                                     navigation bar.
+                                    </p>
+                                    <!-- Insert image here showing the Organization tab on the home page -->
+                                    <p><span class="step">2.&nbsp;&nbsp;</span>After getting redirected to the page, you can now either filter the organizations by using the Category radio buttons or searching the organization directly.
+                                    </p>
+                                    <p><span class="step">3.&nbsp;&nbsp;</span>Once you have found the organization you are looking for, go ahead and click on it.  Once redirected to that organization's page click on the "CONTACT" button.
+                                    </p>
+                                    <!-- Insert image of that contact button -->
+                                    <p><span class="step">4.&nbsp;&nbsp;</span>Now, fill out the form and be sure to include your Name, Email Address, and Subject.  For the Subject dropdown there are many options available including, "Interested in Getting Involved, Inquiring About an Upcoming Event, 
+                                    Reporting a Concern, Media or Publicity Inquiry, Oppurtunity to Collaborate, and Other".
+                                    </p>
+                                    <p><span class="step">5.&nbsp;&nbsp;</span>When you are satisfied with your mesage, you can then submit the form.
+                                    </p>                                       
+                                    <p>
+                                        All you have to do now is be patient and a representative from that organization should be in contact with you shortly!
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="defaultNoShow" id="SearchEvents">
+                        <div class="text-center">
+                            <h3 class="text-gold">Searching for Events</h3>
+                            <hr>
+                        </div>
+                        <div>
+                            <div class="text-center">
+                                <p>One of the largest used features on EngageU is finding interesting upcoming events on campus.  Luckily, EngageU provides powerful functionality to help you narrow down on events that you would like to attend.
+                                </p>
+                                <h5 class="sub-feature-heading text-gold">Ways to Search</h3>
+                                <div>
+                                    <p><span class="step">1.&nbsp;&nbsp;</span>After logging in, you will notice a large search bar in the middle of the home page.  This can be very effective
+                                     if you already know the event you are looking for and just wish to obtain more details about it.
+                                    </p>
+                                    <!-- Insert image here showing the middle search bar on the home page -->
+                                    <p><span class="step">2.&nbsp;&nbsp;</span>When you are trying to find events that interest you and don't know where to start, then clicking the "Events" tab in the upper left hand side of the navigation bar can help you achieve that.  With the steps below, you can help narrow down events that cater to your interests.
+                                    </p>
+                                    <div>
+                                        <p>1. Sign in with your Gannon Network ID and Passowrd if not done already</p>
+                                        <p>2. On the main navigation bar, click "ORGANIZATIONS"</p>
+                                        <!-- Insert image pointing to Events -->
+                                    </div>
+                                    <p>On this page you can find an organization that suits your interest very easily!  You can now filter down organizations that suit your interests and see
+                                         the results on the right hand side of the page.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="defaultNoShow" id="StartDiscussion">
+                        <p>last one</p>
+                        <p>okay</p>
+                    </div>
+                </div>          
             </div>
-        </section>   
+        </section>
+
     </section>    
     <!-- Footer -->
     <footer class="py-5 bg-dark">
@@ -120,23 +213,23 @@
           <p class="m-0 text-center text-white">Copyright &copy; Gannon University SGA Learning Modules 2017</p>
         </div>
         <!-- /.container -->
-      </footer>
+    </footer>
   
-      <!-- Bootstrap core JavaScript -->
-      <script src="vendor/jquery/jquery.min.js"></script>
-      <script src="vendor/popper/popper.min.js"></script>
-      <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
-  
-      <!--knockout include-->
-      <script src="scripts/knockout-3.4.2.js"></script>
-      <script src="scripts/view_models/individualEngageU/feature.js"></script>
-      <script src="scripts/view_models/individualEngageU/individualViewModel.js"></script>
-      <script>
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/popper/popper.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+
+    <!--knockout include-->
+    <script src="scripts/knockout-3.4.2.js"></script>
+    <script src="scripts/view_models/individualEngageU/feature.js"></script>
+    <script src="scripts/view_models/individualEngageU/individualViewModel.js"></script>
+    <script>
         $(document).ready(function () {
             var viewModel = new individualViewModel();
             ko.applyBindings(viewModel, document.getElementById("knockoutIndividualArea"));
         });
-      </script>
+    </script>
     </body>
 </html>
     
