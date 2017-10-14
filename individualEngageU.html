@@ -20,16 +20,16 @@
     </head>
     <body>
     <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <nav id="mainNav" class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
             <div class="container">
-                <a class="navbar-brand" href="#"><span class="text-gold">Learning Modules</span></a>
+                <a class="navbar-brand" href="index.html"><span class="text-gold">Learning Modules</span></a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav ml-auto">
                     <li clalss="nav-item active">
-                    <a class="nav-link" href="#">Home
+                    <a class="nav-link" href="index.html">Home
                         <span class="sr-only">(current)</span>
                     </a>
                     </li>
@@ -37,10 +37,14 @@
                     <a class="nav-link" href="#"><span class="text-gold">About</span></a>
                     </li>
                     <li class="nav-item">
-                    <a class="nav-link" href="#"><span class="text-gold">Services</span></a>
-                    </li>
-                    <li class="nav-item">
-                    <a class="nav-link" href="#"><span class="text-gold">Contact</span></a>
+                        <div class="dropdown">
+                            <a class="nav-link dropdown-toggle text-gold" id="dropdownMenu3" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <span class="text-gold">Select A Module</span>
+                            </a>
+                            <div data-bind="foreach: availableModules" class="fit-to-container dropdown-menu" aria-labelledby="dropdownMenu3">
+                                <a class="nav-link" href="#"><span data-bind="text: name" class="text-maroon"></span></a>
+                            </div>
+                        </div>    
                     </li>
                 </ul>
             </div>
@@ -103,8 +107,27 @@
                     <h1 class="text-center heading-text">Module Features</h1>
                     <hr>
                     <div class="defaultNoShow" id="AccountSettings">
-                        <p>test1</p>
-                        <p>test2</p>
+                        <div class="text-center">
+                            <h3 class="text-gold">Account Settings</h3>
+                            <hr>
+                        </div>
+                        <div>
+                            <div class="text-center">
+                                <p>
+                                </p>
+                                <h5 class="sub-feature-heading text-gold">Ways to Search</h3>
+                                <div>
+                                    <p><span class="step">1.&nbsp;&nbsp;</span>In order to manage your account settings you will have to sign in first.  In the upper right hand corner of the home page you will notice a large blue button labled, "SIGN IN".  Click that button.
+                                    </p>
+                                    <p><span class="step">2.&nbsp;&nbsp;</span>You will now be prompted to enter your network credentials, these will be the same credentials you use for Office 365, Blackboard, MyGannon, etc.  After this has been done, click the green "Sign In" button.
+                                    </p>
+                                    <p><span class="step">3.&nbsp;&nbsp;</span>After being redirected to the home page you will now notice a large circular button in the upper right hand corner with the initial of your first name.  Once that is clicked, click the first option that shows up in the navigation bar.    
+                                    </p>                                                                 
+                                    <p>On this page you will be able to manage your profile, privacy settings, how you receive notifications, and interests.  By setting these up properly, you will certainly enrich your experience you have on engageU.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                     <div class="defaultNoShow" id="SearchOrganizations">
                         <div class="text-center">
@@ -199,8 +222,25 @@
                         </div>
                     </div>
                     <div class="defaultNoShow" id="StartDiscussion">
-                        <p>last one</p>
-                        <p>okay</p>
+                        <div class="text-center">
+                            <h3 class="text-gold">Starting a Discussion</h3>
+                            <hr>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-center">
+                                <p>Starting discussion on a recently upcoming news article uploaded can be a powerful way to clarify any misunderstandings, voice your opinion on subject matter, or even reach out to people who have similar opinions to you on a news article!</p>
+                            </div>
+                            <h5 class="sub-feature-heading text-gold">How to Start a Discussion on News Article</h5>
+                            <div>
+                                <p><span class="step">1.&nbsp;&nbsp;</span>If you are not logged in, you will first need to do so by clicking the blue "Sign In" button in the top right hand corner of the website.  You will be unable to start a discussion without logging in. 
+                                </p>
+                                <p><span class="step">2.&nbsp;&nbsp;</span>Once logged in, on the main navigation bar you will see a tab labled "News".  Click on that link.
+                                </p>
+                                <p><span class="step">3.&nbsp;&nbsp;</span>On this page you will notice a list of recent news atricles in which you will be able to click into.</p>
+                                <p><span class="step">4.&nbsp;&nbsp;</span>After exploring the news article that you are interesting in starting a discussion on, you will be able to do so at the bottom of the page.</p>
+                            </div>
+                            <p>Once you are satisfied with your discussion thread post, other people will be able to see it and react to it!</p>
+                        </div>
                     </div>
                 </div>          
             </div>
@@ -224,10 +264,16 @@
     <script src="scripts/knockout-3.4.2.js"></script>
     <script src="scripts/view_models/individualEngageU/feature.js"></script>
     <script src="scripts/view_models/individualEngageU/individualViewModel.js"></script>
+    <script src="scripts/view_models/navigation/moduleLink.js"></script>
+    <script src="scripts/view_models/navigation/navigationViewModel.js"></script>
     <script>
         $(document).ready(function () {
+            var navBarViewModel = new navigationViewModel();
+            ko.applyBindings(navBarViewModel, document.getElementById("mainNav"));
+
             var viewModel = new individualViewModel();
             ko.applyBindings(viewModel, document.getElementById("knockoutIndividualArea"));
+            console.log("scripts loaded");
         });
     </script>
     </body>
