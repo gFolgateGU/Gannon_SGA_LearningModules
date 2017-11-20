@@ -9,7 +9,7 @@ var navigationViewModel = function () {
 
 		modules.push(new moduleLink("EngageU for a Single User", "individualEngageU.html"));
 		modules.push(new moduleLink("EngageU for a Club Manager", "individualEngageU.html"));
-		modules.push(new moduleLink("ITS FAQ", "individualEngageU.html"));
+		modules.push(new moduleLink("ITS FAQ", "itsFAQ.html"));
 
 		return modules;
 	}
