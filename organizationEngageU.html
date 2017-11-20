@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="description" content="">
+        <meta name="author" content="">
+
+        <title>Gannon University - Learning Modules Home</title>
+
+        <!-- Bootstrap core CSS -->
+        <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+        <!-- Custom styles for this template -->
+        <link href="css/one-page-wonder.css" rel="stylesheet">
+        <link href="css/learning-modules-common.css" rel="stylesheet">
+        <link href="css/font-awesome/css/font-awesome.css" rel="stylesheet">
+        <link href="css/learning-modules-card-extras.css" rel="stylesheet">
+        <link href="css/individualEngageU/individual-engageU.css" rel="stylesheet">
+    </head>
+    <body>
+    <!-- Navigation -->
+    <nav id="mainNav" class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html"><span class="text-gold">Learning Modules</span></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                 <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ml-auto">
+                    <li clalss="nav-item active">
+                    <a class="nav-link" href="index.html">Home
+                        <span class="sr-only">(current)</span>
+                    </a>
+                    </li>
+                    <li class="nav-item">
+                    <a class="nav-link" href="#"><span class="text-gold">About</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <div class="dropdown">
+                            <a class="nav-link dropdown-toggle text-gold" id="dropdownMenu3" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <span class="text-gold">Select A Module</span>
+                            </a>
+                            <div data-bind="foreach: availableModules" class="fit-to-container dropdown-menu" aria-labelledby="dropdownMenu3">
+                                <a class="nav-link" data-bind="attr: { href: linkHref }"><span data-bind="text: name" class="text-maroon"></span></a>
+                            </div>
+                        </div>    
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <header class="alernate-heading-title">
+        <div class="text-center text-gold">
+            <h1 class="display-2">Managing a Club or Organization Using EngageU</h1>
+            <hr>
+            <h3 class="display-6">Learn how to effectively run your club or organization smoothly with EngageU.</h3>
+        </div>
+    </header>
+    <!-- Module Features -->
+    <section class="page-section bg-dark">
+        <div class="container text-white">
+            <div class="text-center heading-section">
+                <h1 class="heading-text">Module Features</h1>
+                <hr>
+                <div class="text-center">
+                    <h2>Work in progress...</h2>
+                    <!-- <ol class="list-group">
+                        <li class="list-group-item feature-list-item">1. Managing your Account Settings</li>
+                        <li class="list-group-item feature-list-item">2. Searching for Organizations</li>
+                        <li class="list-group-item feature-list-item">3. Contacting Organizations of Interest</li>
+                        <li class="list-group-item feature-list-item">4. Searching and Finding Upcoming Events</li>
+                        <li class="list-group-item feature-list-item">5. Starting a Discussion Thread</li>
+                    </ol> -->
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="knockoutIndividualArea">
+        <!-- Dropdown Bar Area -->
+        <!-- <section class="page-section bg-maroon">
+            <div class="container text-gold">
+                <div class="text-center heading-section">
+                    <h1 class="heading-text">Start Learning!</h1>
+                    <hr>
+                    <div class="text-center container">
+                        <div class="dropdown">
+                            <button class="fit-to-container btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Select a Feature Here
+                            </button>
+                            <div class="fit-to-container dropdown-menu" aria-labelledby="dropdownMenu2">
+                                <button data-bind="click: function(data, event) { showFeature('AccountSettings', data, event) }" class="dropdown-item text-center text-maroon" type="button">Account Settings</button>
+                                <button data-bind="click: function(data, event) { showFeature('SearchOrganizations', data, event) }" class="dropdown-item text-center text-maroon" type="button">Search Organizations</button>
+                                <button data-bind="click: function(data, event) { showFeature('ContactOrganization', data, event) }" class="dropdown-item text-center text-maroon" type="button">Contacting Organizations</button>
+                                <button data-bind="click: function(data, event) { showFeature('SearchEvents', data, event) }" class="dropdown-item text-center text-maroon" type="button">Searching/Finding Upcoming Events</button>
+                                <button data-bind="click: function(data, event) { showFeature('StartDiscussion', data, event) }" class="dropdown-item text-center text-maroon" type="button">Start Discussion Thread</button>
+                            </div>
+                        </div>                    
+                    </div>
+                </div>
+            </div>
+        </section>-->
+
+        <!--Test and better improvement for module features -->
+        <section class="page-section bg-dark">
+            <div class="container text-white">
+                <div class="heading-section">
+                    <h1 class="text-center heading-text">Module Features</h1>
+                    <hr>
+                    <!-- <div class="defaultNoShow" id="AccountSettings">
+                        <div class="text-center">
+                            <h3 class="text-gold">Account Settings</h3>
+                            <hr>
+                        </div>
+                        <div>
+                            <div class="text-center">
+                                <p>
+                                </p>
+                                <h5 class="sub-feature-heading text-gold">Ways to Search</h3>
+                                <div>
+                                    <p><span class="step">1.&nbsp;&nbsp;</span>In order to manage your account settings you will have to sign in first.  In the upper right hand corner of the home page you will notice a large blue button labled, "SIGN IN".  Click that button.
+                                    </p>
+                                    <p><span class="step">2.&nbsp;&nbsp;</span>You will now be prompted to enter your network credentials, these will be the same credentials you use for Office 365, Blackboard, MyGannon, etc.  After this has been done, click the green "Sign In" button.
+                                    </p>
+                                    <p><span class="step">3.&nbsp;&nbsp;</span>After being redirected to the home page you will now notice a large circular button in the upper right hand corner with the initial of your first name.  Once that is clicked, click the first option that shows up in the navigation bar.    
+                                    </p>                                                                 
+                                    <p>On this page you will be able to manage your profile, privacy settings, how you receive notifications, and interests.  By setting these up properly, you will certainly enrich your experience you have on engageU.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div> -->
+                </div>          
+            </div>
+        </section>
+    </section>    
+    <!-- Footer -->
+    <footer class="py-5 bg-dark">
+        <div class="container">
+          <p class="m-0 text-center text-white">Copyright &copy; Gannon University SGA Learning Modules 2017</p>
+        </div>
+        <!-- /.container -->
+    </footer>
+  
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/popper/popper.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+
+    <!--knockout include-->
+    <script src="scripts/knockout-3.4.2.js"></script>
+    <script src="scripts/view_models/individualEngageU/feature.js"></script>
+    <script src="scripts/view_models/individualEngageU/individualViewModel.js"></script>
+    <script src="scripts/view_models/navigation/moduleLink.js"></script>
+    <script src="scripts/view_models/navigation/navigationViewModel.js"></script>
+    <script>
+        $(document).ready(function () {
+            var navBarViewModel = new navigationViewModel();
+            ko.applyBindings(navBarViewModel, document.getElementById("mainNav"));
+        });
+    </script>
+    </body>
+</html>
+    
