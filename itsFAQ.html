@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="description" content="">
+        <meta name="author" content="">
+
+        <title>Gannon University - Learning Modules Home</title>
+
+        <!-- Bootstrap core CSS -->
+        <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+        <!-- Custom styles for this template -->
+        <link href="css/one-page-wonder.css" rel="stylesheet">
+        <link href="css/learning-modules-common.css" rel="stylesheet">
+        <link href="css/font-awesome/css/font-awesome.css" rel="stylesheet">
+        <link href="css/learning-modules-card-extras.css" rel="stylesheet">
+        <link href="css/individualEngageU/individual-engageU.css" rel="stylesheet">
+    </head>
+    <body>
+    <!-- Navigation -->
+    <nav id="mainNav" class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+            <div class="container">
+                <a class="navbar-brand" href="index.html"><span class="text-gold">Learning Modules</span></a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ml-auto">
+                    <li clalss="nav-item active">
+                    <a class="nav-link" href="index.html">Home
+                        <span class="sr-only">(current)</span>
+                    </a>
+                    </li>
+                    <li class="nav-item">
+                    <a class="nav-link" href="#"><span class="text-gold">About</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <div class="dropdown">
+                            <a class="nav-link dropdown-toggle text-gold" id="dropdownMenu3" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <span class="text-gold">Select A Module</span>
+                            </a>
+                            <div data-bind="foreach: availableModules" class="fit-to-container dropdown-menu" aria-labelledby="dropdownMenu3">
+                                <a class="nav-link" data-bind="attr: { href: linkHref }"><span data-bind="text: name" class="text-maroon"></span></a>
+                            </div>
+                        </div>    
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <header class="alernate-heading-title">
+        <div class="text-center text-gold">
+            <h1 class="display-2">ITS FAQ</h1>
+            <hr>
+            <h3 class="display-6">Clear up any confusion that you may have and learn how to troubleshoot some common problems students face.</h3>
+        </div>
+    </header>
+    <!-- Module Features -->
+    <section class="page-section bg-dark">
+        <div class="container text-white">
+            <div class="text-center heading-section">
+                <h1 class="heading-text">Module Features</h1>
+                <hr>
+                <div class="text-center">
+                    <ul class="list-group">
+                        <li class="list-group-item feature-list-item">1. Finding your Network ID</li>
+                        <li class="list-group-item feature-list-item">2. What is my default password?</li>
+                        <li class="list-group-item feature-list-item">3. How do I connect my laptop or phone to Gannon's wifi</li>
+                        <li class="list-group-item feature-list-item">4. What is my email address?</li>
+                        <li class="list-group-item feature-list-item">5. How do I setup my email to work with my phone?</li>
+                        <li class="list-group-item feature-list-item">6. How do I register my other devices to the network, such as gaming consoles?</li>
+                        <li class="list-group-item feature-list-item">7. How do I get the wifi scan to run?</li>
+                        <li class="list-group-item feature-list-item">8. How do I obtain my free Office 365 license?</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="knockoutIndividualArea">
+        <section class="page-section bg-maroon">
+            <div class="container text-gold">
+                <div class="text-center heading-section">
+                    <h1 class="heading-text">Start Learning!</h1>
+                    <hr>
+                    <div class="text-center container">
+                        <div class="dropdown">
+                            <button class="fit-to-container btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Select a Feature Here
+                            </button>
+                            <div class="fit-to-container dropdown-menu" aria-labelledby="dropdownMenu2">
+                                <button data-bind="click: function(data, event) { showFeature('NetworkID', data, event) }" class="dropdown-item text-center text-maroon" type="button">Finding your Network ID</button>
+                            </div>
+                        </div>                    
+                    </div>
+                </div>
+            </div>
+        </section>
+    </section> 
+
+<!--Test and better improvement for module features -->
+        <section class="page-section bg-dark">
+            <div class="container text-white">
+                <div class="heading-section">
+                    <h1 class="text-center heading-text">Module Features</h1>
+                    <hr>
+                    <div class="defaultNoShow" id="NetworkID">
+                        <div class="text-center">
+                            <h3 class="text-gold">Finding your Network ID</h3>
+                            <hr>
+                        </div>
+                    </div>
+                </div>          
+            </div>
+        </section>
+
+    <!-- Footer -->
+    <footer class="py-5 bg-dark">
+        <div class="container">
+          <p class="m-0 text-center text-white">Copyright &copy; Gannon University SGA Learning Modules 2017</p>
+        </div>
+        <!-- /.container -->
+    </footer>
+  
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/popper/popper.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+
+    <!--knockout include-->
+    <script src="scripts/knockout-3.4.2.js"></script>
+    <script src="scripts/view_models/itsFAQ/faq.js"></script>
+    <script src="scripts/view_models/itsFAQ/itsViewModel.js"></script>
+    <script src="scripts/view_models/navigation/moduleLink.js"></script>
+    <script src="scripts/view_models/navigation/navigationViewModel.js"></script>
+    <script>
+        $(document).ready(function () {
+            var navBarViewModel = new navigationViewModel();
+            ko.applyBindings(navBarViewModel, document.getElementById("mainNav"));
+
+            var viewModel = new itsViewModel();
+            ko.applyBindings(viewModel, document.getElementById("knockoutIndividualArea"));
+            console.log("scripts loaded");
+        });
+    </script>
+    </body>
+</html>
+    
