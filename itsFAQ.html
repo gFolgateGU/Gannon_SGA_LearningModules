@@ -17,6 +17,7 @@
         <link href="css/font-awesome/css/font-awesome.css" rel="stylesheet">
         <link href="css/learning-modules-card-extras.css" rel="stylesheet">
         <link href="css/individualEngageU/individual-engageU.css" rel="stylesheet">
+        <link href="css/itsFAQ/its-faq.css" rel="stylesheet">
     </head>
     <body>
     <!-- Navigation -->
@@ -67,7 +68,7 @@
                     <ul class="list-group">
                         <li class="list-group-item feature-list-item">1. Finding your Network ID</li>
                         <li class="list-group-item feature-list-item">2. What is my default password?</li>
-                        <li class="list-group-item feature-list-item">3. How do I connect my laptop or phone to Gannon's wifi</li>
+                        <li class="list-group-item feature-list-item">3. How do I connect my laptop or phone to Gannon's wireless network?</li>
                         <li class="list-group-item feature-list-item">4. What is my email address?</li>
                         <li class="list-group-item feature-list-item">5. How do I setup my email to work with my phone?</li>
                         <li class="list-group-item feature-list-item">6. How do I register my other devices to the network, such as gaming consoles?</li>
@@ -91,6 +92,9 @@
                             </button>
                             <div class="fit-to-container dropdown-menu" aria-labelledby="dropdownMenu2">
                                 <button data-bind="click: function(data, event) { showFeature('NetworkID', data, event) }" class="dropdown-item text-center text-maroon" type="button">Finding your Network ID</button>
+                                <button data-bind="click: function(data, event) { showFeature('DefaultPassword', data, event) }" class="dropdown-item text-center text-maroon" type="button">What is my default password?</button>
+                                <button data-bind="click: function(data, event) { showFeature('WifiConnect', data, event) }" class="dropdown-item text-center text-maroon" type="button">Connect to Gannon's Wifi</button>
+                                <button data-bind="click: function(data, event) { showFeature('EmailAndWithPhone', data, event) }" class="dropdown-item text-center text-maroon" type="button">Your Email and your Device</button>                                                                                           
                             </div>
                         </div>                    
                     </div>
@@ -98,31 +102,111 @@
             </div>
         </section>
     </section> 
-
-<!--Test and better improvement for module features -->
-        <section class="page-section bg-dark">
-            <div class="container text-white">
-                <div class="heading-section">
-                    <h1 class="text-center heading-text">Module Features</h1>
-                    <hr>
-                    <div class="defaultNoShow" id="NetworkID">
-                        <div class="text-center">
-                            <h3 class="text-gold">Finding your Network ID</h3>
-                            <hr>
-                        </div>
-                    </div>
-                </div>          
+    <!--Test and better improvement for module features -->
+    <section class="page-section bg-dark">
+        <div class="container text-white">
+            <div id="defaultNoOptionSelectedArea">
+                <h2 class="text-center"><b>Select an option from the dropdown above, to begin!</b></h2>
             </div>
-        </section>
-
+            <div class="defaultNoShow" id="NetworkID">
+                <div class="text-center">
+                    <h3 class="text-gold">Finding your Network ID</h3>
+                    <hr>                 
+                    <div class="infoForceLeft">
+                        <p>Please refer to the steps below in order to lookup your Network ID!</p>
+                        <h5 class="sub-feature-heading text-gold text-center">How to Find your Network ID</h3>
+                        <div>
+                            <p><span class="step">1.&nbsp;&nbsp;</span>Please first visit <a target="_blank" href="https://my.gannon.edu">my.gannon.edu</a>
+                            </p>
+                            <!-- Insert image here below step 2 to show the link -->
+                            <p><span class="step">2.&nbsp;&nbsp;</span>After getting redirected to the website, you should now scroll down to the "What's My Network ID" link
+                            </p>
+                            <p><span class="step">3.&nbsp;&nbsp;</span>Once you have found the link you must fill out the form provided.  It will require you to enter your last name and either one of the following: Gannon ID, Social Security Number, or SEVIS ID (Only for International Students).
+                            </p>
+                            <!-- Insert image of that contact button -->
+                            <p><span class="step">4.&nbsp;&nbsp;</span>Press submit.
+                            </p>                                   
+                            <p>
+                                Your Network ID should now be available to you.
+                            </p>
+                        </div>
+                    </div>    
+                </div>
+            </div>
+            <div class="defaultNoShow" id="DefaultPassword">
+                <div class="text-center">
+                    <h3 class="text-gold">What is My Default Password?</h3>
+                    <hr>                 
+                    <div class="infoForceLeft">
+                        <p>Forgetting your password is something that many of us experience, and it can be rather annoying.  Luckily Gannon ITS has a plan for you if you forget!</p>
+                        <h5 class="sub-feature-heading text-gold text-center">Your Default Password</h3>
+                        <div>
+                            <p>Your default password is the last four numbers of your Social Security Number followed by the capitla initials of your
+                                first and last name.
+                            </p>
+                            <p><span class="text-gold"><b>NOTE: </b></span>  If you are an international student, this will be your SEVIS ID instead.</p>
+                        </div>
+                    </div>    
+                </div>
+            </div>
+            <div class="defaultNoShow" id="WifiConnect">
+                <div class="text-center">
+                    <h3 class="text-gold">How do I connect to Gannon's Wireless Network?</h3>
+                    <hr>                 
+                    <div class="infoForceLeft">
+                        <p>Connecting to Gannon's wireless network can sometimes be a bit difficult if you are not toally aware with all of the prerequisites that need to happen before you are able to connect to the network on your mobile device or computer.</p>
+                        <h5 class="sub-feature-heading text-gold text-center">Helpful Tips to Connect to the Internet</h3>
+                        <div>
+                            <p><span class="step">1.&nbsp;&nbsp;</span>Ensure your device is not in airplane mode and your Wifi is turned on.
+                            </p>
+                            <!-- Insert image here below step 2 to show the link -->
+                            <p><span class="step">2.&nbsp;&nbsp;</span>If you are on Gannon's campus, select "GannonWireless".
+                            </p>
+                            <p><span class="step">3.&nbsp;&nbsp;</span>Open the internet browser of your choice on your devide, if you are not able to search the internet you should be redirected to the registration site.  If not, pleace access <a target="_blank" href="https://netreg.gannon.edu">netreg.gannon.edu</a>
+                            </p>
+                            <!-- Insert image of that contact button -->
+                            <p><span class="step">4.&nbsp;&nbsp;</span>Follow the steps as prompted by the network registration site.  At the end you will be required to go through the wireless scan which requires downloading the Bradford Dissolvable Agent client, if successful you will be redirected to the internet.  If not please continue reading. 
+                            </p>
+                            <p><span class="step">5.&nbsp;&nbsp;</span>Below is a list of things you should try before visiting ITS to diagnose the issue on your PC.
+                            </p>
+                            <ul class="text-gold">
+                                <li class="subInfoListElement">In order to pass the scan successfully, you must have some type of antivirus installed on your computer.  Gannon recommends Sophos&reg; and it can be obtained for free, although others will work such as McAfee&reg;.</li>
+                                <li class="subInfoListElement">Make sure your antivirus software is up to date.</li>
+                                <li class="subInfoListElement">Ensure that your operating system is up to date.</li>
+                                <li class="subInfoListElement">Restart your computer.</li>
+                            </ul>                                   
+                            <p>
+                                If there are still problems, then you should consider reaching out to Gannon's ITS Department and schedule an appointment.
+                            </p>
+                        </div>
+                    </div>    
+                </div>
+            </div>
+            <div class="defaultNoShow" id="EmailAndWithPhone">
+                <div class="text-center">
+                    <h3 class="text-gold">What is My Email Address?</h3>
+                    <hr>                 
+                    <div class="infoForceLeft">
+                        <p>Your email address is what keeps you connected to everything that is going on here at campus and it is important to remember what it is!</p>
+                        <h5 class="sub-feature-heading text-gold text-center">Your Default Password</h3>
+                        <div>
+                            <p>Your email address is simply your <i>"networkID@knights.gannon.edu".</i> 
+                            </p>
+                            <p><span class="text-gold"><b>FURTHER: </b></span>  If you do not have the Microsoft Outlook app already downloaded on your phone, download it from the Google Play Store or
+                                 Apple's App Store.  This will give you the option to be notified on the go when you receieve important emails.  See Section 5 for more</p>
+                        </div>
+                    </div>    
+                </div>
+            </div>
+        </div>
+    </section>
     <!-- Footer -->
-    <footer class="py-5 bg-dark">
+    <footer class="py-5 bg-maroon">
         <div class="container">
           <p class="m-0 text-center text-white">Copyright &copy; Gannon University SGA Learning Modules 2017</p>
         </div>
         <!-- /.container -->
     </footer>
-  
     <!-- Bootstrap core JavaScript -->
     <script src="vendor/jquery/jquery.min.js"></script>
     <script src="vendor/popper/popper.min.js"></script>

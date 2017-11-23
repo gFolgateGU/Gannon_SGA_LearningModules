@@ -47,3 +47,7 @@
 .defaultNoShow {
     display: none;
 }
+
+.infoForceLeft {
+    text-align: left;
+}

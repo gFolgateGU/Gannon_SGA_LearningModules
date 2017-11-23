@@ -15,7 +15,7 @@ var itsViewModel = function () {
         availableFeatures.push(new faq("NetworkID"));
         availableFeatures.push(new faq("DefaultPassword"));
         availableFeatures.push(new faq("WifiConnect"));
-        availableFeatures.push(new faq("EmailAddress"));
+        availableFeatures.push(new faq("EmailAndWithPhone"));
         availableFeatures.push(new faq("EmailWithPhone"));
         availableFeatures.push(new faq("RegisterDeviceToNetwork"));
         availableFeatures.push(new faq("WifiScan"));
@@ -25,8 +25,11 @@ var itsViewModel = function () {
     }
 
     function hideFeatures() {
+        $("#defaultNoOptionSelectedArea").hide();
+
         vm.features().forEach(function (feat) {
-            var jQueryDivHolder = "#" + feat.name;
+            var jQueryDivHolder = "#" + feat.questionName;
+            console.log(jQueryDivHolder);
             $(jQueryDivHolder).hide();
         });
     }
