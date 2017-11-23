@@ -7,6 +7,10 @@ var itsViewModel = function () {
         hideFeatures();
         var jQueryDivToShow = "#" + name;
         $(jQueryDivToShow).show();
+        window.location.hash = name;
+        var $navHeightBuffer = 0 - $("#mainNav").height();
+        console.log($(jQueryDivToShow).height());
+        window.scrollBy(0, $navHeightBuffer * 2);
     }
 
     function initFeatures() {
@@ -16,9 +20,7 @@ var itsViewModel = function () {
         availableFeatures.push(new faq("DefaultPassword"));
         availableFeatures.push(new faq("WifiConnect"));
         availableFeatures.push(new faq("EmailAndWithPhone"));
-        availableFeatures.push(new faq("EmailWithPhone"));
         availableFeatures.push(new faq("RegisterDeviceToNetwork"));
-        availableFeatures.push(new faq("WifiScan"));
         availableFeatures.push(new faq("Office365"));
 
         return availableFeatures;
@@ -29,7 +31,6 @@ var itsViewModel = function () {
 
         vm.features().forEach(function (feat) {
             var jQueryDivHolder = "#" + feat.questionName;
-            console.log(jQueryDivHolder);
             $(jQueryDivHolder).hide();
         });
     }

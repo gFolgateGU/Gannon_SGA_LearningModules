@@ -69,11 +69,9 @@
                         <li class="list-group-item feature-list-item">1. Finding your Network ID</li>
                         <li class="list-group-item feature-list-item">2. What is my default password?</li>
                         <li class="list-group-item feature-list-item">3. How do I connect my laptop or phone to Gannon's wireless network?</li>
-                        <li class="list-group-item feature-list-item">4. What is my email address?</li>
-                        <li class="list-group-item feature-list-item">5. How do I setup my email to work with my phone?</li>
-                        <li class="list-group-item feature-list-item">6. How do I register my other devices to the network, such as gaming consoles?</li>
-                        <li class="list-group-item feature-list-item">7. How do I get the wifi scan to run?</li>
-                        <li class="list-group-item feature-list-item">8. How do I obtain my free Office 365 license?</li>
+                        <li class="list-group-item feature-list-item">4. Your Email and your device</li>
+                        <li class="list-group-item feature-list-item">5. How do I register my other devices to the network, such as gaming consoles?</li>
+                        <li class="list-group-item feature-list-item">7. How do I obtain my free Office 365 license?</li>
                     </ul>
                 </div>
             </div>
@@ -94,7 +92,9 @@
                                 <button data-bind="click: function(data, event) { showFeature('NetworkID', data, event) }" class="dropdown-item text-center text-maroon" type="button">Finding your Network ID</button>
                                 <button data-bind="click: function(data, event) { showFeature('DefaultPassword', data, event) }" class="dropdown-item text-center text-maroon" type="button">What is my default password?</button>
                                 <button data-bind="click: function(data, event) { showFeature('WifiConnect', data, event) }" class="dropdown-item text-center text-maroon" type="button">Connect to Gannon's Wifi</button>
-                                <button data-bind="click: function(data, event) { showFeature('EmailAndWithPhone', data, event) }" class="dropdown-item text-center text-maroon" type="button">Your Email and your Device</button>                                                                                           
+                                <button data-bind="click: function(data, event) { showFeature('EmailAndWithPhone', data, event) }" class="dropdown-item text-center text-maroon" type="button">Your Email and your Device</button>
+                                <button data-bind="click: function(data, event) { showFeature('RegisterDeviceToNetwork', data, event) }" class="dropdown-item text-center text-maroon" type="button">Personal Device and Gannon's Network</button>                                                                                            
+                                <button data-bind="click: function(data, event) { showFeature('Office365', data, event) }" class="dropdown-item text-center text-maroon" type="button">Obtaining Office 365 for Free</button>                           
                             </div>
                         </div>                    
                     </div>
@@ -170,13 +170,15 @@
                             <p><span class="step">5.&nbsp;&nbsp;</span>Below is a list of things you should try before visiting ITS to diagnose the issue on your PC.
                             </p>
                             <ul class="text-gold">
-                                <li class="subInfoListElement">In order to pass the scan successfully, you must have some type of antivirus installed on your computer.  Gannon recommends Sophos&reg; and it can be obtained for free, although others will work such as McAfee&reg;.</li>
+                                <li class="subInfoListElement">In order to pass the scan successfully, you must have some type of antivirus installed on your computer.  If you have a Windows computer, then you will alreay have Windows Defender 
+                                     which is what Gannon reccomends.  However, if you have a Mac, then Gannon reccomends the Avira&reg; software and it is free.
+                                </li>
                                 <li class="subInfoListElement">Make sure your antivirus software is up to date.</li>
                                 <li class="subInfoListElement">Ensure that your operating system is up to date.</li>
                                 <li class="subInfoListElement">Restart your computer.</li>
                             </ul>                                   
                             <p>
-                                If there are still problems, then you should consider reaching out to Gannon's ITS Department and schedule an appointment.
+                                Please note that you are due for a network scan every thirty days.  If there are still problems, then you should consider reaching out to Gannon's ITS Department and schedule an appointment.
                             </p>
                         </div>
                     </div>    
@@ -190,14 +192,76 @@
                         <p>Your email address is what keeps you connected to everything that is going on here at campus and it is important to remember what it is!</p>
                         <h5 class="sub-feature-heading text-gold text-center">Your Default Password</h3>
                         <div>
-                            <p>Your email address is simply your <i>"networkID@knights.gannon.edu".</i> 
+                            <p>Your email address is simply <i>"networkID@knights.gannon.edu".</i> 
                             </p>
+                            <h6 class="text-gold">Getting your Email In Sync with your Phone (iPhone)</h6>
+                            <ol>
+                                <li>On your device go to Settings > Mail > Contacts > Calendars</li>
+                                <li>Select "Add Account"</li>
+                                <li>Select "Microsoft Exchange"</li>
+                                <li>Enter your full email address in the "Email" field</li>
+                                <li>Skip the domain</li>
+                                <li>Enter your full email address for the "Username" field and your password in the "Password" field.</li>
+                                <li>Select Next.</li>
+                                <li>Verify that the server name is <b>outlook.office365.com</b></li>
+                                <li>Select Next.</li>
+                            </ol>
                             <p><span class="text-gold"><b>FURTHER: </b></span>  If you do not have the Microsoft Outlook app already downloaded on your phone, download it from the Google Play Store or
-                                 Apple's App Store.  This will give you the option to be notified on the go when you receieve important emails.  See Section 5 for more</p>
+                                 Apple's App Store.  This will give you the option to be notified on the go when you receieve important emails.  This is not a bad option if you have more than one email
+                                  you have to manage!
+                            </p>
                         </div>
                     </div>    
                 </div>
             </div>
+            <div class="defaultNoShow" id="RegisterDeviceToNetwork">
+                <div class="text-center">
+                    <h3 class="text-gold">Registering your Personal Device to Gannon's Wireless Network</h3>
+                    <hr>                 
+                    <div class="infoForceLeft">
+                        <p>Please refer to the steps below in order to get your personal device such as an Xbox or Apple TV connected!</p>
+                        <h5 class="sub-feature-heading text-gold text-center">Steps to Register Personal Device</h3>
+                        <div>
+                            <p><span class="step">1.&nbsp;&nbsp;</span>Please first locate the MAC address on your device.  If you are having trouble locating this on your device,
+                                 please refer to this link to help locate it! <a target="_blank" href="https://campusreg.lycoming.edu/registration/FindMac.jsp">Find your MAC Address</a>
+                            </p>
+                            <p><span class="step">2.&nbsp;&nbsp;</span>With your MAC address in mind, visit this website on a computer that is connected to Gannon's network already <a target="_blank" href="https://netreg.gannon.edu/registration/GameRegister.jsp">Register Device</a>
+                            </p>
+                            <p><span class="step">3.&nbsp;&nbsp;</span>On this site please enter your network ID, password, device type, and MAC address.
+                            </p>
+                            <!-- Insert image of that contact button -->
+                            <p><span class="step">4.&nbsp;&nbsp;</span>Press submit.
+                            </p>                                   
+                            <p>
+                                Your device should now be connected to the internet.  If you are still experiencing problems, please send the help desk a picture of your MAC address at 
+                                <a target="_blank" href="mailto:helpdesk@gannon.edu">helpdesk@gannon.edu</a>
+                            </p>
+                            <p><span class="text-gold"><b>FURTHER: </b></span>  If you are trying to connect your device via the ethernet jacks available in the residence halls, please keep in mind these are shut off 
+                                by default.  If you would like to reactivate them, please call the Help Desk and schdule a visit.  Also keep in mind that this will be a low priority issue and may take some time.
+                           </p>                           
+                        </div>
+                    </div>    
+                </div>
+            </div>
+            <div class="defaultNoShow" id="Office365">
+                <div class="text-center">
+                    <h3 class="text-gold">Downloading and Installing Office 365 for Free</h3>
+                    <hr>                 
+                    <div class="infoForceLeft">
+                        <p>Please refer to the steps below in order to get your free subscription of Office 365</p>
+                        <h5 class="sub-feature-heading text-gold text-center">Steps to Register Personal Device</h3>
+                        <div>
+                            <p><span class="step">1.&nbsp;&nbsp;</span>Please visit this website <a target="_blank" href="https://www.office.com/getoffice365">www.office.com/getoffice365</a>
+                            </p>
+                            <p><span class="step">2.&nbsp;&nbsp;</span>Sign up using your Gannon email address, an email will be sent shortly after supplying this information.
+                            </p>
+                            <p><span class="step">3.&nbsp;&nbsp;</span>Check your Gannon email. Follow the instructions sent in that email and the download will begin.  Please keep in mind that this is a 
+                                relatively large file and may take some time to download and install.
+                            </p>                                                         
+                        </div>
+                    </div>    
+                </div>
+            </div>                           
         </div>
     </section>
     <!-- Footer -->
