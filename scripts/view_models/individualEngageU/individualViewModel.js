@@ -7,6 +7,9 @@ var individualViewModel = function () {
         hideFeatures();
         var jQueryDivToShow = "#" + name;
         $(jQueryDivToShow).show();
+        window.location.hash = name;
+        var $navHeightBuffer = 0 - $("#mainNav").height();
+        window.scrollBy(0, $navHeightBuffer * 2);
     }
 
     function initFeatures() {
@@ -22,6 +25,8 @@ var individualViewModel = function () {
     }
 
     function hideFeatures() {
+        $("#defaultNoOptionSelectedArea").hide();
+
         vm.features().forEach(function (feat) {
             var jQueryDivHolder = "#" + feat.name;
             $(jQueryDivHolder).hide();
