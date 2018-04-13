@@ -9,7 +9,6 @@ var itsViewModel = function () {
         $(jQueryDivToShow).show();
         window.location.hash = name;
         var $navHeightBuffer = 0 - $("#mainNav").height();
-        console.log($(jQueryDivToShow).height());
         window.scrollBy(0, $navHeightBuffer * 2);
     }
 

@@ -15,11 +15,10 @@ var individualViewModel = function () {
     function initFeatures() {
         var availableFeatures = ko.observableArray();
 
-        availableFeatures.push(new feature("AccountSettings"));
-        availableFeatures.push(new feature("SearchOrganizations"));
-        availableFeatures.push(new feature("ContactOrganization"));
-        availableFeatures.push(new feature("SearchEvents"));
-        availableFeatures.push(new feature("StartDiscussion"));
+        availableFeatures.push(new feature("ActionCenter"));
+        availableFeatures.push(new feature("ManageRoster"));
+        availableFeatures.push(new feature("CreateEvent"));
+        availableFeatures.push(new feature("ManageDocuments"));
 
         return availableFeatures;
     }
